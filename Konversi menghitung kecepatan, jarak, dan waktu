@@ -1,0 +1,76 @@
+#include <iostream>
+using namespace std;
+
+void menghitungKecepatan() {
+    double jarak, waktu, kecepatan;
+    cout << "Jarak (km): ";
+    cin >> jarak;
+    cout << "Waktu (menit): ";
+    cin >> waktu;
+
+    if (waktu != 0) {
+        kecepatan = jarak / (waktu / 60.0); 
+        cout << "Kecepatan: " << kecepatan << " km/jam" << endl;
+    } else {
+        cout << "jangan angka 0 kocak!" << endl;
+    }
+}
+
+void menghitungJarak() {
+    double kecepatan, waktu, jarak;
+    cout << "Kecepatan (km/jam): ";
+    cin >> kecepatan;
+    cout << "Waktu (menit): ";
+    cin >> waktu;
+
+    jarak = kecepatan * (waktu / 60.0); 
+    cout << "Jarak: " << jarak << " km" << endl;
+}
+
+void menghitungWaktu() {
+    double jarak, kecepatan, waktu;
+    cout << "Jarak (km): ";
+    cin >> jarak;
+    cout << "Kecepatan (km/jam): ";
+    cin >> kecepatan;
+
+    if (kecepatan != 0) {
+        waktu = (jarak / kecepatan) * 60.0; 
+        cout << "Waktu: " << waktu << " menit" << endl;
+    } else {
+        cout << "jangan angka 0 kocak!" << endl;
+    }
+}
+
+int main() {
+    int pilihan;
+
+    do {
+    	cout << "\n";
+        cout << "1. Hitung Kecepatan" << endl;
+        cout << "2. Hitung Jarak" << endl;
+        cout << "3. Hitung Waktu" << endl;
+        cout << "4. Keluar" << endl;
+        cout << "pilihan : "; cin >> pilihan ;
+        
+
+        switch (pilihan) {
+            case 1:
+                menghitungKecepatan();
+                break;
+            case 2:
+                menghitungJarak();
+                break;
+            case 3:
+                menghitungWaktu();
+                break;
+            case 4:
+                cout << "Terima kasih telah menggunakan program ini!" << endl;
+                break;
+            default:
+                cout << "Pilihan tidak valid! Silakan coba lagi." << endl;
+        }
+    } while (pilihan != 4);
+
+    return 0;
+}
