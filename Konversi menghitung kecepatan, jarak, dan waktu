@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void menghitungKecepatan() {
+void hitungKecepatan() {
     double jarak, waktu, kecepatan;
     cout << "Jarak (km): ";
     cin >> jarak;
@@ -16,7 +16,7 @@ void menghitungKecepatan() {
     }
 }
 
-void menghitungJarak() {
+void hitungJarak() {
     double kecepatan, waktu, jarak;
     cout << "Kecepatan (km/jam): ";
     cin >> kecepatan;
@@ -27,7 +27,7 @@ void menghitungJarak() {
     cout << "Jarak: " << jarak << " km" << endl;
 }
 
-void menghitungWaktu() {
+void hitungWaktu() {
     double jarak, kecepatan, waktu;
     cout << "Jarak (km): ";
     cin >> jarak;
@@ -55,19 +55,19 @@ int main() {
 
         switch (pilihan) {
             case 1:
-                menghitungKecepatan();
+                hitungKecepatan();
                 break;
             case 2:
-                menghitungJarak();
+                hitungJarak();
                 break;
             case 3:
-                menghitungWaktu();
+                hitungWaktu();
                 break;
             case 4:
-                cout << "Terima kasih telah menggunakan program ini!" << endl;
+                cout << "Terima Kasih Sudah Menggunakan Program Ini!" << endl;
                 break;
             default:
-                cout << "Pilihan tidak valid! Silakan coba lagi." << endl;
+                cout << "Pilihan Invalid, Mohon Coba Lagi!" << endl;
         }
     } while (pilihan != 4);
 
