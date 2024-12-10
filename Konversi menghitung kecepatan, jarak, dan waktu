@@ -52,7 +52,6 @@ int main() {
         cout << "3. Hitung Waktu" << endl;
         cout << "4. Keluar" << endl;
         cout << "pilihan : "; cin >> pilihan ;
-        
 
         switch (pilihan) {
             case 1:
